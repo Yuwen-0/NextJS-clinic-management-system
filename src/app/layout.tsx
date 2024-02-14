@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import "./global.css";
+import Nav from "@/components/NavBar/Nav";
 
 export const metadata: Metadata = {
   title: "Next.js Clinic Management System",
@@ -8,14 +10,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
+type Props = {
   children: React.ReactNode;
-}) {
+  login: React.ReactNode;
+};
+
+export default function RootLayout({ children, login }: Props) {
+  const isLoggedIn = false;
   return (
-    <div>
-      <main>{children}</main>
-    </div>
+    <html lang="en">
+      <body>
+        <Nav />
+        {children}
+        {isLoggedIn && login}
+      </body>
+    </html>
   );
 }

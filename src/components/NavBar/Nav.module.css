@@ -1,0 +1,22 @@
+.navBar{
+    display: flex;
+    padding: 2em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navLinks{
+    display: flex;
+    font-size: 36px;
+    gap: 2em;
+}
+
+.titleHospitalName{
+    font-size: 30px;
+}
+
+.profileImg{
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-bottom: 5px;
+}
